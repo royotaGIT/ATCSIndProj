@@ -4,9 +4,18 @@ public void setup(){
   fill(0);
   rect(50, 30, 500, 650, 10);
   fill(255);
-  rect(70, 50, 460, 250, 10);
+  rect(70, 50, 460, 150, 10);
   //buttons
-  rect(470, 620, 60, 40, 10);
+  for(int i = 0; i < 5; i++){
+    rect(470, 465 + i * 40, 60, 30, 10); // enter button
+  }
+  
+  //numbers
+  for(int r = 0; r < 4; r++){
+    for(int c = 0; c < 3; c++){
+      
+    }
+  }
   
   //text
   textAlign(LEFT);
