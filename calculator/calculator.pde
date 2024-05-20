@@ -323,7 +323,9 @@ public void mouseClicked(){
       }
       for(int i = 0; i < components.size(); i++){
          String c = components.get(i);
-         if(((c.equals("+") || c.equals("-"))||(c.equals("X") || c.equals("/")))&&(operator.equals(""))){operator = c;}
+         if((((c.equals("+") || c.equals("-"))||(c.equals("X") || c.equals("/")))||
+             (c.equals("^")))
+             &&(operator.equals(""))){operator = c;}
          else if(c.equals("-")){
             components.set(i+1, String.valueOf(Double.valueOf(components.get(i+1)) * -1));
          }else{
@@ -333,6 +335,13 @@ public void mouseClicked(){
               else if(operator.equals("-")){result = result - c2; operator = "";}
               else if(operator.equals("X")){result = result * c2; operator = "";}
               else if(operator.equals("/")){result = result / c2; operator = "";}
+              else if(operator.equals("^")){
+                double oldResult = result;
+                for(int j = 0; j < c2 - 1; j++){
+                  result = result * oldResult;
+                }
+                i++;
+              }
             }catch(Exception E){
             }
           }
