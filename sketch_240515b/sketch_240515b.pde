@@ -232,17 +232,7 @@ public void draw(){
   fill(255);
   rect(70, 50, 360, 150, 10);
   fill(0);
-  if(second){
-    text("True", 90, 100);
-  }else{
-    text("False", 90, 100);
-  }
-  if(alpha){
-    text("True", 90, 130);
-  }else{
-    text("False", 90, 130);
-  }
-  text(currString, 90, 160);
+  text(currString, 90, 80);
 }
 
 public void mouseClicked(){
